@@ -109,18 +109,33 @@
                 </ul>
             </div>
         </section>
-        <section class="section businesssection">
+        <section class="section business-section">
             <div class="container">
                 <h2 class="title business-title">Чем мы занимаемся</h2>
                 <ul class="business-list">
                     <li class="business-item">
-                        <img src="./images/img1.jpg" alt="Фото человек работает за компьютером" width="370" height="294">
+                        <div class="business-thumb">
+                            <img src="./images/img1.jpg" alt="Фото человек работает за компьютером" width="370" height="294">
+                        </div>
+                        <div class="business-block">
+                            <p class="business-text">Десктопные приложения</p>
+                        </div>
                     </li>
                     <li class="business-item">
-                        <img src="./images/img2.jpg" alt="Фото человек смотрит в телефон" width="370" height="294">
+                        <div class="business-thumb">
+                            <img src="./images/img2.jpg" alt="Фото человек смотрит в телефон" width="370" height="294">
+                        </div>
+                        <div class="business-block">
+                            <p class="business-text">Мобильные приложения</p>
+                        </div>
                     </li>
                     <li class="business-item">
-                        <img src="./images/img3.jpg" alt="Фото человек смотрит в планшет" width="370" height="294">
+                        <div class="business-thumb">
+                            <img src="./images/img3.jpg" alt="Фото человек смотрит в планшет" width="370" height="294">
+                        </div>
+                        <div class="business-block">
+                            <p class="business-text">Дизайнерские решения</p>
+                        </div>
                     </li>
                 </ul>
             </div>
@@ -134,7 +149,7 @@
                         <div class="team-team">
                             <h3 class="team-list-title">Игорь Демьяненко</h3>
                             <p class="team-text" lang="en">Product Designer</p>
-                            <ul class="team-sotial-list">
+                            <ul class="team-social-list">
                                 <li class="team-social-item">
                                     <a class="team-social-link" href="">
                                         <svg class="team-social-icon" width="20" height="20">
@@ -171,7 +186,7 @@
                         <div class="team-team">
                             <h3 class="team-list-title">Ольга Репина</h3>
                             <p class="team-text" lang="en">Frontend Developer</p>
-                            <ul class="team-sotial-list">
+                            <ul class="team-social-list">
                                 <li class="team-social-item">
                                     <a class="team-social-link" href="">
                                         <svg class="team-social-icon" width="20" height="20">
@@ -208,7 +223,7 @@
                         <div class="team-team">
                             <h3 class="team-list-title">Николай Тарасов</h3>
                             <p class="team-text" lang="en">Marketing</p>
-                            <ul class="team-sotial-list">
+                            <ul class="team-social-list">
                                 <li class="team-social-item">
                                     <a class="team-social-link" href="">
                                         <svg class="team-social-icon" width="20" height="20">
@@ -245,7 +260,7 @@
                         <div class="team-team">
                             <h3 class="team-list-title">Михаил Ермаков</h3>
                             <p class="team-text" lang="en">UI Designer</p>
-                            <ul class="team-sotial-list">
+                            <ul class="team-social-list">
                                 <li class="team-social-item">
                                     <a class="team-social-link" href="">
                                         <svg class="team-social-icon" width="20" height="20">
@@ -385,5 +400,19 @@
             </div>
         </div>
     </footer>
+    <div class="backdrop is-hidden" data-modal>
+        <div class="modal">
+            <!-- <div class="modal-close"> -->
+            <button type="button" class="modal-close" data-modal-close>
+                <a class="modal-close-link" href="">
+                    <svg class="modal-close-icon" width="11" height="11">
+                        <use href="./images/icons.svg#icon-modal-close"></use>
+                    </svg>
+                </a>
+            </button>
+            <!-- </div> -->
+        </div>
+    </div>
+    <script src="./js/modal.js"></script>
 </body>
 </html>

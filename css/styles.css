@@ -135,6 +135,8 @@ img {
 
 .header-logo {
   margin-right: 93px;
+  padding-top: 24px;
+  padding-bottom: 25px;
 }
 
 .header-item:not(:last-child) {
@@ -173,6 +175,23 @@ img {
 
   padding-top: 33px;
   padding-bottom: 33px;
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.header-item {
+  position: relative;
+}
+
+.header-item .pagemark::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 4px;
+  border-radius: 2px;
+  background-color: var(--header-hover-color);
+  position: absolute;
+  bottom: 0;
 }
 
 .address-mail,
@@ -188,6 +207,8 @@ img {
 
   padding-top: 32px;
   padding-bottom: 32px;
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .address-mail-icon,
@@ -207,8 +228,7 @@ img {
 .footer-mail:hover,
 .footer-mail:focus,
 .footer-tel:hover,
-.footer-tel:focus,
-.pagemark {
+.footer-tel:focus {
   color: var(--header-hover-color);
 }
 
@@ -244,6 +264,7 @@ img {
   width: 696px;
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 30px;
 }
 
 .hero-button {
@@ -259,7 +280,6 @@ img {
   padding-top: 10px;
   padding-bottom: 10px;
 
-  margin-top: 30px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -303,7 +323,7 @@ img {
 
 /* ------------BUSINESS----------------- */
 
-.businesssection {
+.business-section {
   padding-top: 0;
 }
 
@@ -331,6 +351,38 @@ img {
 
 .business-item:not(:last-child) {
   margin-right: 30px;
+}
+
+.business-item {
+  position: relative;
+}
+
+.business-thumb {
+  position: relative;
+}
+
+.business-block {
+  display: flex;
+  background: rgba(47, 48, 58, 0.8);
+  width: 370px;
+  height: 70px;
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 0;
+}
+
+.business-text {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-align: center;
+  vertical-align: middle;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+
+  color: #ffffff;
 }
 
 /* -------------TEAM------------------ */
@@ -379,7 +431,7 @@ img {
   padding: 30px 0;
 }
 
-.team-sotial-list {
+.team-social-list {
   display: flex;
   justify-content: center;
 }
@@ -402,6 +454,8 @@ img {
   align-items: center;
   justify-content: center;
   color: #afb1b8;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .team-social-link:hover,
@@ -444,6 +498,7 @@ img {
   border: 1px solid #afb1b8;
   box-sizing: border-box;
   border-radius: 4px;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .clients-link:hover,
@@ -474,6 +529,7 @@ address {
   color: var(--second-text-color);
 
   display: block;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-mail,
@@ -482,6 +538,7 @@ address {
   line-height: 1.71;
   letter-spacing: 0.03em;
   color: var(--third-text-color);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-logo {
@@ -534,6 +591,7 @@ address {
   align-items: center;
   justify-content: center;
   background: rgba(255, 255, 255, 0.1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-social-link:hover,
@@ -560,6 +618,9 @@ address {
   color: var(--main-button-color);
   background: #f5f4fa;
   border-radius: 4px;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .filter-button:hover,
@@ -593,6 +654,35 @@ address {
   margin-bottom: 30px;
 }
 
+.portfolio-link:hover .portfolio-overlay-text,
+.portfolio-link:focus .portfolio-overlay-text {
+  transform: translateY(0);
+}
+
+.portfolio-item-wrap {
+  position: relative;
+  overflow: hidden;
+}
+
+.portfolio-overlay-text {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.56;
+  letter-spacing: 0.03em;
+  color: #ffffff;
+  padding: 63px 24px;
+  overflow: auto;
+
+  position: absolute;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(33, 150, 243, 0.9);
+
+  transform: translateY(100%);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 .portfolio-item:nth-child(3n) {
   margin-right: 0;
 }
@@ -620,6 +710,7 @@ address {
 
 .portfolio-link {
   display: block;
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .portfolio-div {
@@ -630,4 +721,52 @@ address {
 .portfolio-link:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+
+/* -----------------MODAL--------------------- */
+
+.backdrop {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.2);
+  position: fixed;
+  top: 0;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal {
+  position: absolute;
+  width: 528px;
+  min-height: 581px;
+  background: #ffffff;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.modal-close {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  background-color: transparent;
+  position: absolute;
+  top: 8px;
+  right: 6px;
+}
+
+.modal-close-link {
+  padding: 9px;
+}
+
+.is-hidden {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
 }
